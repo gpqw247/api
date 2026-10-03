@@ -1690,5 +1690,6 @@ async def health():
 
 if __name__ == "__main__":
     import sys
+    port = int(os.environ.get("PORT", 80))
     _loop = "uvloop" if sys.platform != "win32" else "asyncio"
-    uvicorn.run("api_test:app", host="0.0.0.0", port=80, workers=1, loop=_loop)
+    uvicorn.run("sp:app", host="0.0.0.0", port=port, workers=1, loop=_loop)
