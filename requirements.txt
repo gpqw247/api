@@ -1,4 +1,5 @@
+fastapi
+uvicorn[standard]
+httpx
 aiohttp>=3.8.0
 flask>=2.0.0
-asyncio>=3.4.3
-httpx
